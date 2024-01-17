@@ -34,7 +34,7 @@ function draw() {
         textSize(25);
     }
     textAlign(CENTER)
-    text('I LOVE YOU', 0, 0);
+    text('I LOVE YOU SOPHIA', 0, 0);
     pop()
 
     var wave = fft.waveform();
