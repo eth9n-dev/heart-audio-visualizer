@@ -2,6 +2,7 @@ var song;
 var fft;
 var particles = [];
 var positions = [];
+var message = 'I LOVE YOU SOPHIA';
 
 function randomIntFromInterval(min, max) { // min and max included 
     return Math.floor(Math.random() * (max - min + 1) + min)
@@ -14,6 +15,30 @@ function preload() {
 function setup() {
     createCanvas(windowWidth, windowHeight);
     fft = new p5.FFT();
+}
+
+function keyPressed() {
+    if (keyCode === 49) {
+        song.jump(130);
+    }
+    else if (keyCode === 50) {
+        song.jump(339);
+    }
+    else if (keyCode === 51) {
+        song.jump(579);
+    }
+    else if (keyCode === 52) {
+        song.jump(742);
+    }
+    else if (keyCode === 53) {
+        song.jump(973);
+    }
+    else if (keyCode === 54) {
+        song.jump(1184);
+    }
+    else if (keyCode === 48) {
+        song.jump(0);
+    }
 }
 
 function draw() {
@@ -34,7 +59,7 @@ function draw() {
         textSize(25);
     }
     textAlign(CENTER)
-    text('I LOVE YOU SOPHIA', 0, 0);
+    text(message, 0, 0);
     pop()
 
     var wave = fft.waveform();
@@ -69,6 +94,15 @@ function draw() {
             particles.splice(i, 1);
         }
     }
+
+    if (song.currentTime() >= song.duration() - 6) {
+        message = 'WILL YOU BE MY \nVALENTINE?';
+    }
+    else {
+        message = 'I LOVE YOU SOPHIA';
+    }
+
+    print(song.currentTime(), song.duration());
 }
 
 function mouseClicked() {
