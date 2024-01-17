@@ -65,6 +65,8 @@ function draw() {
     var wave = fft.waveform();
 
     beginShape();
+    drawingContext.shadowBlur = 32;
+    drawingContext.shadowColor = color(255, 0, 0);
     for (var i = 0; i < 25; i += .1) {
         var index = floor(map(i, 0, width, 0, wave.length));
         var r = map(wave[index], -1, 1, 10, 13);
@@ -147,6 +149,8 @@ class Particle {
     show() {
         noStroke();
         fill(255, 0, 0);
+        drawingContext.shadowBlur = 32;
+        drawingContext.shadowColor = color(255, 0, 0);
         ellipse(this.pos.x, this.pos.y, this.w);
     }
 }
