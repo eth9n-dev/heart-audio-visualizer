@@ -25,6 +25,18 @@ function draw() {
     fft.analyze();
     amp = fft.getEnergy(20, 200);
 
+    push()
+    if (amp > 100) {
+        rotate(random(-0.03, 0.03));
+        textSize(26);
+    }
+    else {
+        textSize(25);
+    }
+    textAlign(CENTER)
+    text('I LOVE YOU', 0, 0);
+    pop()
+
     var wave = fft.waveform();
 
     beginShape();
@@ -41,9 +53,12 @@ function draw() {
     }
     endShape();
 
-    var randomPos = positions[randomIntFromInterval(0, 250)];
-    var p = new Particle(randomPos);
-    particles.push(p);
+    if (amp > 100) {
+        var randomPos = positions[randomIntFromInterval(0, 250)];
+        var p = new Particle(randomPos);
+        particles.push(p);
+    }
+    
 
     for (var i = particles.length - 1; i >= 0; i--) {
         if (!particles[i].edges()) {
