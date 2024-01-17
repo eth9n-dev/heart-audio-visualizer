@@ -17,6 +17,10 @@ function setup() {
     fft = new p5.FFT();
 }
 
+function windowResized() { 
+    resizeCanvas(windowWidth, windowHeight); 
+}
+
 function keyPressed() {
     if (keyCode === 49) {
         song.jump(130);
