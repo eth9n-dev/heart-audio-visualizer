@@ -1,2 +1,2 @@
-# heart-audio-visualizer
- quick project for my love
+# Heart-Audio-Visualizer for Sophia
+Check out the demo here: heart-audio-visualizer.vercel.app
