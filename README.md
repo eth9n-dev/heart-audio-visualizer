@@ -38,7 +38,7 @@ Heart Audio Visualizer is a web-based application that transforms audio input in
 
 ## Demo
 
-For a live demonstration of the Heart Audio Visualizer, visit [Heart Audio Visualizer Demo](heart-audio-visualizer.vercel.app).
+For a live demonstration of the Heart Audio Visualizer, visit heart-audio-visualizer.vercel.app.
 
 ## Contributing
 
