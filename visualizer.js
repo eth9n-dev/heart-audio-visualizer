@@ -2,7 +2,7 @@ var song;
 var fft;
 var particles = [];
 var positions = []; // particle origin positions
-var message = 'I LOVE YOU SOPHIA'; // message default
+var message = 'I LOVE YOU'; // message default
 
 function randomIntFromInterval(min, max) { // min and max included 
     return Math.floor(Math.random() * (max - min + 1) + min)
